@@ -6,7 +6,7 @@ const PORT = 3000;
 
 const psCommand = "Add-Type -AssemblyName System.Runtime.WindowsRuntime; $connectionProfile = [Windows.Networking.Connectivity.NetworkInformation,Windows.Networking.Connectivity,ContentType=WindowsRuntime]::GetInternetConnectionProfile(); $tetheringManager = [Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager,Windows.Networking.NetworkOperators,ContentType=WindowsRuntime]::CreateFromConnectionProfile($connectionProfile); $tetheringManager.StartTetheringAsync();";
 
-app.get('/toggle', (_req, res) => {
+app.get('/wake', (_req, res) => {
     console.log('Phone signal received!');
     
     res.send('Hotspot is waking up!');
