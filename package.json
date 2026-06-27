@@ -9,7 +9,11 @@
     "start": "node ./dist/index.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Wither (https://github.com/IzawaNanako)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IzawaNanako/pc-hotspot-server.git"
+  },
   "license": "ISC",
   "type": "module",
   "devDependencies": {
