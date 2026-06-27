@@ -14,7 +14,6 @@ exit
 :admin
 cd /d "%~dp0"
 
-call npm run build
 call pm2 start dist/index.js --name "hotspot-server"
 
 pause
