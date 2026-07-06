@@ -1,6 +1,6 @@
 # PC Hotspot Server
 
-A lightweight Express.js utility server designed to remotely trigger the Windows Mobile Hotspot. By exposing a local network endpoint that executes a PowerShell command, this tool allows you to wake up your PC's hotspot seamlessly from other devices.
+A lightweight Express.js utility server designed to remotely trigger the Windows Mobile Hotspot. By exposing a local network endpoint that executes a PowerShell command, this tool allows you to wake up your PC's hotspot seamlessly from other devices. This project was developed as a custom solution tailored to the creator's own workflow.
 
 ## Primary Use Case
 
