@@ -1,28 +1,31 @@
 {
   "name": "pc-hotspot-server",
   "version": "1.0.0",
-  "description": "",
-  "main": "./src/index.ts",
-  "scripts": {
-    "dev": "tsx watch ./src/index.ts",
-    "build": "tsc",
-    "start": "node ./dist/index.js"
-  },
+  "description": "A lightweight Node.js server that exposes an endpoint to remotely enable the Windows Mobile Hotspot via PowerShell.",
   "keywords": [],
-  "author": "Wither (https://github.com/IzawaNanako)",
+  "homepage": "https://github.com/IzawaNanako/pc-hotspot-server#readme",
+  "bugs": {
+    "url": "https://github.com/IzawaNanako/pc-hotspot-server/issues"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/IzawaNanako/pc-hotspot-server.git"
   },
-  "license": "ISC",
+  "license": "GPL-3.0-only",
+  "author": "Wither (https://github.com/IzawaNanako)",
   "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx watch ./src/index.ts",
+    "start": "node ./dist/index.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  },
   "devDependencies": {
     "@types/express": "^5.0.6",
     "@types/node": "^26.0.0",
     "tsx": "^4.22.4",
     "typescript": "^6.0.3"
-  },
-  "dependencies": {
-    "express": "^5.2.1"
   }
 }
