@@ -17,9 +17,9 @@ This project was built with local network automation in mind. A common workflow 
 
 ## Tech Stack
 
-* **Language:** TypeScript
-* **Framework:** Express.js
-* **Process Manager:** PM2
+- **Language:** TypeScript
+- **Framework:** Express.js
+- **Process Manager:** PM2
 
 ## Getting Started
 
@@ -27,37 +27,37 @@ This project was built with local network automation in mind. A common workflow 
 
 To run this server, you will need:
 
-* **Operating System:** Windows 10 or Windows 11
-* **Hardware:** A Wi-Fi adapter with Mobile Hotspot capabilities enabled in Windows settings.
-* **Environment:** [Node.js](https://nodejs.org/) (v16+ recommended)
-* **Process Manager:** PM2 installed globally on your system.
+- **Operating System:** Windows 10 or Windows 11
+- **Hardware:** A Wi-Fi adapter with Mobile Hotspot capabilities enabled in Windows settings.
+- **Environment:** [Node.js](https://nodejs.org/) (v16+ recommended)
+- **Process Manager:** PM2 installed globally on your system.
 
-    ```bash
-    npm install -g pm2
-    ```
+  ```bash
+  npm install -g pm2
+  ```
 
-* **Network:** Both the PC and the trigger device must be able to communicate over the network (e.g., same LAN, or a mesh VPN like Tailscale/Zerotier).
+- **Network:** Both the PC and the trigger device must be able to communicate over the network (e.g., same LAN, or a mesh VPN like Tailscale/Zerotier).
 
 ### Installation
 
 1. Clone the repository to your local machine:
 
-    ```bash
-    git clone https://github.com/IzawaNanako/pc-hotspot-server.git
-    cd pc-hotspot-server
-    ```
+   ```bash
+   git clone https://github.com/IzawaNanako/pc-hotspot-server.git
+   cd pc-hotspot-server
+   ```
 
 2. Install the project dependencies:
 
-    ```bash
-    npm install
-    ```
+   ```bash
+   npm install
+   ```
 
 3. Build the project:
 
-    ```bash
-    npm run build
-    ```
+   ```bash
+   npm run build
+   ```
 
 ### Usage & Execution
 
@@ -67,14 +67,14 @@ Controlling the Windows network state requires Administrator privileges. The pro
 
 Run the `run.bat` file.
 
-* The script will prompt for Administrator approval.
-* Once approved, it will automatically compile the code and start the server in the background using PM2 under the name `hotspot-server`.
+- The script will prompt for Administrator approval.
+- Once approved, it will automatically compile the code and start the server in the background using PM2 under the name `hotspot-server`.
 
 #### Stopping the Server
 
 Run the `stop.bat` file.
 
-* This will safely terminate the PM2 background process.
+- This will safely terminate the PM2 background process.
 
 #### Triggering the Hotspot
 
