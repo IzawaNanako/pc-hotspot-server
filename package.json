@@ -16,7 +16,7 @@
   "type": "module",
   "scripts": {
     "typecheck": "tsc --noEmit",
-    "dev": "node watch ./src/index.ts",
+    "dev": "node --watch ./src/index.ts",
     "start": "node ./src/index.ts",
     "check": "tsc --noEmit && biome check && dprint check",
     "fix": "biome check --write && dprint fmt"
