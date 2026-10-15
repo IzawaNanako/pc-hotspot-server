@@ -1,6 +1,6 @@
 {
   "name": "pc-hotspot-server",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A lightweight Node.js server that exposes an endpoint to remotely enable the Windows Mobile Hotspot via PowerShell.",
   "keywords": [],
   "homepage": "https://github.com/IzawaNanako/pc-hotspot-server#readme",
