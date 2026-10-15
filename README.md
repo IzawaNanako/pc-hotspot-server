@@ -29,14 +29,14 @@ To run this server, you will need:
 
 - **Operating System:** Windows 10 or Windows 11
 - **Hardware:** A Wi-Fi adapter with Mobile Hotspot capabilities enabled in Windows settings.
-- **Environment:** [Node.js](https://nodejs.org/) (v16+ recommended)
+- **Environment:** [Node.js](https://nodejs.org/) (Tested on v26.1.0)
 - **Process Manager:** PM2 installed globally on your system.
 
   ```bash
   npm install -g pm2
   ```
 
-- **Network:** Both the PC and the trigger device must be able to communicate over the network (e.g., same LAN, or a mesh VPN like Tailscale/Zerotier).
+- **Network:** Both the PC and the trigger device must be able to communicate over the network (e.g., same LAN, or a mesh VPN like Tailscale/ZeroTier).
 
 ### Installation
 
@@ -44,19 +44,14 @@ To run this server, you will need:
 
    ```bash
    git clone https://github.com/IzawaNanako/pc-hotspot-server.git
-   cd pc-hotspot-server
    ```
 
-2. Install the project dependencies:
+2. Rename `.env.example` to `.env`.
+
+3. Generate a private token and put it into your `.env`:
 
    ```bash
-   npm install
-   ```
-
-3. Build the project:
-
-   ```bash
-   npm run build
+   node -p "require('crypto').randomBytes(24).toString('hex')"
    ```
 
 ### Usage & Execution
@@ -68,7 +63,7 @@ Controlling the Windows network state requires Administrator privileges. The pro
 Run the `run.bat` file.
 
 - The script will prompt for Administrator approval.
-- Once approved, it will automatically compile the code and start the server in the background using PM2 under the name `hotspot-server`.
+- Once approved, it will start the server in the background using PM2 under the name `hotspot-server`.
 
 #### Stopping the Server
 
@@ -83,7 +78,7 @@ Once the server is running, you can activate the PC's hotspot by sending a stand
 Replace `localhost` with your PC's local IP address or Tailscale IP if accessing from another device:
 
 ```text
-http://localhost:3000/wake
+http://localhost:3000/wake?token=YOURTOKENHERE
 ```
 
 Upon a successful request, the server will log the receipt and the Windows Mobile Hotspot will be initialized.
