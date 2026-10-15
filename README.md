@@ -44,11 +44,18 @@ To run this server, you will need:
 
    ```bash
    git clone https://github.com/IzawaNanako/pc-hotspot-server.git
+   cd pc-hotspot-server
    ```
 
-2. Rename `.env.example` to `.env`.
+2. Install project dependencies.
 
-3. Generate a private token and put it into your `.env`:
+   ```bash
+   npm install
+   ```
+
+3. Rename `.env.example` to `.env`.
+
+4. Generate a private token and put it into your `.env`:
 
    ```bash
    node -p "require('crypto').randomBytes(24).toString('hex')"
