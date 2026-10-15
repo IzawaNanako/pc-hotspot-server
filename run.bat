@@ -14,6 +14,6 @@ exit
 :admin
 cd /d "%~dp0"
 
-call pm2 start dist/index.js --name "hotspot-server"
+call pm2 start ecosystem.config.cjs
 
 pause
